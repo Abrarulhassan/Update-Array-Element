@@ -1,0 +1,44 @@
+  Console.WriteLine("Update/Edit UserName");
+            //initilize the i for (for Loop)
+            int i = 0;
+            //create Array
+            string[] userName = {"Abrar","Ali","Zain","Kashif"};
+            Console.WriteLine("All user Name is : ");
+            //foreach Loop
+            foreach (string Names in userName)
+            {
+                Console.WriteLine(Names);
+            }
+            //Take value from user which element he/she want to edit/update
+            Console.WriteLine("Please Enter Which Name do you want to Update : ");
+            string Name = Console.ReadLine();
+            //declare flage of bool
+            bool Flage = false;
+            //create for loop until userName length
+            for (i = 0; i < userName.Length; i++)
+            {
+                //use if condition. userName[i] == Name means if value userName array i(the) index is equal to name that we take from user then update
+                if (userName[i] == Name)
+                {
+                    Console.WriteLine("Please Update UserName : ");
+                    userName[i] = Console.ReadLine();
+                    Flage = true;
+                    break;
+                }
+            }
+            if (Flage)
+            {
+                Console.WriteLine("Sucessfully Updated");
+                //print all values from array 
+                foreach (string name in userName)
+                {
+                    Console.WriteLine(name);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Name not Found");
+            }
+            Console.ReadLine();
+             
+#Code-With-Aspj
